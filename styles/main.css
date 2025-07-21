@@ -1,3 +1,37 @@
 body {
-    background-color: green;
+  /* background-color: green; */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button {
+  transition: border-color 0.5s, color 0.25s, background-color 0.25s;
+  border-bottom: 3px solid #0000;
+}
+
+.button:hover {
+  border-color: black;
+}
+
+#mainContent {
+  background-color: white;
+  flex: 1;
+}
+
+footer {
+  text-align: center;
+  max-height: fit-content;
+}
+
+footer > a:visited,
+footer > a 
+{
+  color: initial;
 }
