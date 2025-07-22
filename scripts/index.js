@@ -18,6 +18,6 @@ addressInfoBtn.addEventListener("click", buildAddressContent)
 
 // buildSplashpageContent()
 // buildAboutContent()
-// buildScheduleAppointment()
-buildAddressContent()
+buildScheduleAppointment()
+// buildAddressContent()
 // buildmedicineContent()
