@@ -9,7 +9,7 @@ export function buildmedicineContent() {
         `Detection Testing Pagagraph One`,
         `Detection Testing Pagagraph Two`,
       ],
-      backgroundPhoto: `url("../Assets/jonas-degener-Hvl4NH9mF8M-unsplash.jpg")`,
+      backgroundPhoto: `url("../assets/jonas-degener-Hvl4NH9mF8M-unsplash.jpg")`,
     },
     {
       name: "Early Detection Testing",
@@ -18,7 +18,7 @@ export function buildmedicineContent() {
         `Early Detection Testing Paragraph One`,
         `Early Detection Testing Paragraph Two`,
       ],
-      backgroundPhoto: `url("../Assets/sumup-Cy_RRgdwHxA-unsplash.jpg")`,
+      backgroundPhoto: `url("../assets/sumup-Cy_RRgdwHxA-unsplash.jpg")`,
     },
     {
       name: "Regenerative Aesthetics",
@@ -67,29 +67,33 @@ export function buildmedicineContent() {
       const sidebarItem = document.createElement("div");
       sidebarItem.innerText = medicineDataListing.name;
 
-      sidebarItem.addEventListener("click", () => {
-        document.getElementById("medicineContent").innerHTML = "";
-        const heading = document.createElement("h1");
-        heading.innerText = medicineDataListing.heading;
-
-        const medicineContent = document.getElementById("medicineContent");
-        medicineContent.append(heading);
-
-        medicineContent.style.background = medicineDataListing.backgroundPhoto;
-        medicineContent.style.backgroundSize = "contain";
-
-        for (let j = 0; j < medicineDataListing.paragraphs.length; j++) {
-          const paragraph = medicineDataListing.paragraphs[j];
-
-          const medicalListingParagraph = document.createElement("p");
-          medicalListingParagraph.className = "medicalListingParagraphs";
-          medicalListingParagraph.innerText = paragraph;
-
-          heading.after(medicalListingParagraph);
-        }
-      });
+      sidebarItem.addEventListener("click", () =>
+        handleSidebarItemClick(medicineDataListing)
+      );
       sidebar.appendChild(sidebarItem);
     }
     medicalSection.append(sidebar);
+  }
+
+  function handleSidebarItemClick(medicineDataListing) {
+    document.getElementById("medicineContent").innerHTML = "";
+    const heading = document.createElement("h1");
+    heading.innerText = medicineDataListing.heading;
+
+    const medicineContent = document.getElementById("medicineContent");
+    medicineContent.append(heading);
+
+    medicineContent.style.background = medicineDataListing.backgroundPhoto;
+    medicineContent.style.backgroundSize = "contain";
+
+    for (let j = 0; j < medicineDataListing.paragraphs.length; j++) {
+      const paragraph = medicineDataListing.paragraphs[j];
+
+      const medicalListingParagraph = document.createElement("p");
+      medicalListingParagraph.className = "medicalListingParagraphs";
+      medicalListingParagraph.innerText = paragraph;
+
+      heading.after(medicalListingParagraph);
+    }
   }
 }
