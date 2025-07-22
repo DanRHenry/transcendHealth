@@ -1,5 +1,4 @@
 body {
-  /* background-color: green; */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -7,23 +6,105 @@ body {
 }
 
 nav {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  text-align: center;
+  /* justify-content: space-evenly; */
+  height: 3em;
+  align-items: center;
 }
 
 .button {
+  /* background-color: red; */
+  /* width: 10em; */
+  width: auto;
+  display: inline-block;
   transition: border-color 0.5s, color 0.25s, background-color 0.25s;
   border-bottom: 3px solid #0000;
 }
 
-.button:hover {
+.button:hover{
+  cursor: pointer;
+}
+
+nav > div > div:hover {
   border-color: black;
+  font-weight: bold;
 }
 
 #mainContent {
-  background-color: white;
+  display: flex;
   flex: 1;
 }
+
+/* Medicine Section */
+
+#medicalSection {
+  display: grid;
+  grid-template-areas: "sidebar medicineContent";
+  grid-template-columns: 11em 1fr;
+  width: 100%;
+}
+
+#sidebar{
+  grid-area: sidebar;
+  position: static;
+  color: whitesmoke;
+  background-color: green;
+  text-shadow: 1px 0 1px black;
+  border-right: 2px solid black;
+  white-space: nowrap;
+}
+
+#sidebar > div{
+  padding: 3px 0 3px 0;
+  transition: left .1s;
+  left: 0;
+}
+
+#sidebar > div:hover {
+  position: relative;
+  cursor: pointer;
+  background-color: green;
+  border-right: 1px solid black;
+  border-top-right-radius: .5em;
+  border-bottom-right-radius: .5em;
+  left: 1em;
+}
+
+#medicineContent{
+  grid-area: medicineContent;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-left: 1em;
+}
+
+/* Address Content */
+#addressContent {
+  display: grid;
+  grid-template-columns: 20% auto;
+  min-width: 100vw;
+  align-items: center;
+}
+
+
+#addressContent > div {
+  text-align: center;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 1em;
+}
+
+#addressContent > iframe {
+  margin: 1em;
+  aspect-ratio: 1.33;
+  border: 3px solid green;
+  border-radius: 1em;
+}
+
+/* Footer Section */
 
 footer {
   text-align: center;
