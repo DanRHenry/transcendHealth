@@ -4,6 +4,9 @@ import { buildScheduleAppointment } from "./components/buildScheduleAppointment.
 import { buildMedicineContent } from "./components/buildMedicineContent.js";
 import { buildAddressContent } from "./components/buildAddressContent.js";
 import { buildmap } from "./buildmap.js";
+import {serverURL} from "../serverURL.js";
+
+console.log("serverURL:",serverURL)
 
 const homeBtn = document.getElementById("homeBtn");
 const aboutBtn = document.getElementById("aboutBtn");
