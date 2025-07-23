@@ -4,8 +4,8 @@ export function buildScheduleAppointment() {
   // scheduleContent.innerText = "Schedule Appointment Content";
 
   const mainContent = document.getElementById("mainContent");
-
   mainContent.innerHTML = "";
+
   mainContent.append(scheduleContent);
 
   const contactTextContainer = document.createElement("div")
@@ -15,18 +15,7 @@ export function buildScheduleAppointment() {
   contactTextHeader.innerText = "Contact Us"
 
   const contactTextParagraph = document.createElement('p')
-  contactTextParagraph.innerText = `Lorem  ipsum  dolor  sit  amet,  consectetur 
-adipiscing  elit.  Pellentesque  dapibus  accumsan 
-rhoncus.  Mauris  urna  augue,  mattis  id  facilisis 
-mattis, semper ac diam. Praesent bibendum mattis 
-ligula,  nec  pellentesque  massa  iaculis  sit  amet. Etiam  venenatis  enim  ut  nisi  porttitor  laoreet. 
-Nullam  venenatis  faucibus  elit  in  iaculis.  In  hac 
-habitasse platea dictumst. Curabitur a arcu ipsum. 
-Sed  nec  magna  tempor,  dignissim  turpis  sed, cursus turpis. Mauris tincidunt scelerisque metus, 
-congue vehicula tortor ullamcorper ac. Curabitur gravida euismod sem, ac sodales lorem iaculis sed. 
-Pellentesque  auctor,  tortor  sit  amet  scelerisque 
-porttitor,  libero  ipsum  tincidunt  lorem,  sed faucibus  nunc  risus  et  orci.  Quisque  eu  ex  sed 
-massa ultrices venenatis.`
+  contactTextParagraph.innerText = `    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, excepturi incidunt aliquid quis esse ducimus odio. Atque libero, quos dignissimos, eos aut soluta consequatur amet ipsa quibusdam, possimus temporibus earum minima odit impedit officiis. Odio iure consequatur voluptatum dicta dolore numquam quas architecto asperiores nam nesciunt. Veniam recusandae, possimus consequuntur ad facilis ea fugiat porro deleniti repudiandae! Architecto, laboriosam unde debitis atque quasi sint praesentium voluptatibus commodi maxime officiis adipisci saepe at vel nam fugit! Et quidem illum, dolor rem, molestias ut enim repellat minus voluptatum repudiandae saepe dicta, facere ipsa minima quisquam accusantium! Hic eos totam doloremque, eaque aperiam quas voluptate quae consequuntur accusantium blanditiis autem impedit fuga ut maxime eveniet repellat quidem ratione, non, unde sunt alias earum neque rerum suscipit?`
 
 contactTextContainer.append(contactTextHeader, contactTextParagraph)
 
