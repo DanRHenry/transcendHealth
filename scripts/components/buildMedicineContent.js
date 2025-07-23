@@ -1,4 +1,4 @@
-export function buildMedicineContent() {
+export function buildMedicineContent(serverURL) {
   const mainContent = document.getElementById("mainContent");
   mainContent.innerHTML = "";
   const medicinePageData = [
@@ -9,7 +9,7 @@ export function buildMedicineContent() {
         `Detection Testing Pagagraph One`,
         `Detection Testing Pagagraph Two`,
       ],
-      backgroundPhoto: `url("../assets/yousef-espanioly-DA_tplYgTow-unsplash.jpg")`,
+      backgroundPhoto: `url("${serverURL}/assets/yousef-espanioly-DA_tplYgTow-unsplash.jpg")`,
     },
     {
       name: "Early Detection Testing",
@@ -18,7 +18,7 @@ export function buildMedicineContent() {
         `Early Detection Testing Paragraph One`,
         `Early Detection Testing Paragraph Two`,
       ],
-      backgroundPhoto: `url("../assets/ahmed-cTPBm3vP5Xk-unsplash.jpg")`,
+      backgroundPhoto: `url("${serverURL}/assets/ahmed-cTPBm3vP5Xk-unsplash.jpg")`,
     },
     {
       name: "Regenerative Aesthetics",

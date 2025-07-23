@@ -1,4 +1,4 @@
-export function buildLandingpageContent() {
+export function buildLandingpageContent(serverURL) {
   const mainContent = document.getElementById("mainContent");
   mainContent.innerHTML = "";
 
@@ -13,7 +13,7 @@ export function buildLandingpageContent() {
   landingpageHeader.innerText = `Our Mission`;
 
   const landingpageImage = document.createElement("img");
-  landingpageImage.src = "../assets/yousef-espanioly-DA_tplYgTow-unsplash.jpg";
+  landingpageImage.src = `${serverURL}/assets/yousef-espanioly-DA_tplYgTow-unsplash.jpg`;
   landingpageImage.alt = "about image";
 
   const landingpageTextSection = document.createElement("div");

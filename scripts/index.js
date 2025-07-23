@@ -6,8 +6,6 @@ import { buildAddressContent } from "./components/buildAddressContent.js";
 import { buildmap } from "./buildmap.js";
 import {serverURL} from "../serverURL.js";
 
-console.log("serverURL:",serverURL)
-
 const homeBtn = document.getElementById("homeBtn");
 const aboutBtn = document.getElementById("aboutBtn");
 const scheduleApptBtn = document.getElementById("scheduleApptBtn");
@@ -28,7 +26,7 @@ function handleHomeBtnClick(e) {
   clearBtnStyling();
   homeBtn.style.fontWeight = "bold";
   homeBtn.style.borderColor = "white";
-  buildLandingpageContent();
+  buildLandingpageContent(serverURL);
 }
 
 function handleAboutBtnClick(e) {
@@ -37,7 +35,7 @@ function handleAboutBtnClick(e) {
   hidemap()
   aboutBtn.style.fontWeight = "bold";
   aboutBtn.style.borderColor = "white";
-  buildAboutContent();
+  buildAboutContent(serverURL);
 }
 
 function handleScheduleApptBtnClick(e) {
@@ -63,7 +61,7 @@ function handleMedicineBtnClick(e) {
   hidemap()
   medicineBtn.style.fontWeight = "bold";
   medicineBtn.style.borderColor = "white";
-  buildMedicineContent();
+  buildMedicineContent(serverURL);
 }
 
 function clearBtnStyling() {

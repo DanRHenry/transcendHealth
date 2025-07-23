@@ -1,4 +1,4 @@
-export function buildAboutContent() {
+export function buildAboutContent(serverURL) {
   const aboutContent = document.createElement("div");
   aboutContent.id = "aboutContent";
 
@@ -31,7 +31,7 @@ const aboutPictureHolder = document.createElement("div")
 aboutPictureHolder.id = "aboutPictureHolder"
 
 const aboutPicture = document.createElement("img")
-aboutPicture.src = "../assets/yousef-espanioly-DA_tplYgTow-unsplash.jpg"
+aboutPicture.src = `${serverURL}/assets/yousef-espanioly-DA_tplYgTow-unsplash.jpg`
 aboutPicture.alt = "about image"
 
 aboutPictureHolder.appendChild(aboutPicture)
