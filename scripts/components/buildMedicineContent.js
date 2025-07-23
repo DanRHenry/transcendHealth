@@ -1,4 +1,4 @@
-export function buildmedicineContent() {
+export function buildMedicineContent() {
   const mainContent = document.getElementById("mainContent");
   mainContent.innerHTML = "";
   const medicinePageData = [
@@ -9,7 +9,7 @@ export function buildmedicineContent() {
         `Detection Testing Pagagraph One`,
         `Detection Testing Pagagraph Two`,
       ],
-      backgroundPhoto: `url("../assets/jonas-degener-Hvl4NH9mF8M-unsplash.jpg")`,
+      backgroundPhoto: `url("../assets/yousef-espanioly-DA_tplYgTow-unsplash.jpg")`,
     },
     {
       name: "Early Detection Testing",
@@ -18,7 +18,7 @@ export function buildmedicineContent() {
         `Early Detection Testing Paragraph One`,
         `Early Detection Testing Paragraph Two`,
       ],
-      backgroundPhoto: `url("../assets/sumup-Cy_RRgdwHxA-unsplash.jpg")`,
+      backgroundPhoto: `url("../assets/ahmed-cTPBm3vP5Xk-unsplash.jpg")`,
     },
     {
       name: "Regenerative Aesthetics",
@@ -45,15 +45,23 @@ export function buildmedicineContent() {
     medicineContent.id = "medicineContent";
 
     const medicalContentInitialHeader = document.createElement("h1");
-    medicalContentInitialHeader.innerText = "Medicine Content Information Here";
+    medicalContentInitialHeader.innerText = "What is Medicine?";
 
-    const medicalContentInitialParagraph = document.createElement("p");
-    medicalContentInitialParagraph.innerText =
-      "Medicine Content Starting Paragraph";
+    const medicalContentInitialParagraph_1 = document.createElement("p");
+    medicalContentInitialParagraph_1.innerText =
+      `    Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus non ipsam delectus nobis incidunt voluptate earum officia harum reprehenderit perferendis, cumque ex enim placeat soluta eaque suscipit quam reiciendis cupiditate accusamus fugit deserunt. Temporibus inventore provident odio soluta iusto, magni nemo ducimus, corporis quidem animi asperiores ad. Earum error porro eius voluptas temporibus quam cum ut placeat atque iure repellendus facilis ratione officiis velit repellat modi reiciendis, nulla quos optio illo recusandae! Reprehenderit eum tempora laboriosam nisi alias, natus laborum est, voluptate odio, quibusdam consectetur animi provident ratione cupiditate minus quisquam mollitia ad perspiciatis saepe consequatur sed!`;
+
+const medicalContentInitialParagraph_2 = document.createElement("p")
+medicalContentInitialParagraph_2.innerText = `    Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus non ipsam delectus nobis incidunt voluptate earum officia harum reprehenderit perferendis, cumque ex enim placeat soluta eaque suscipit quam reiciendis cupiditate accusamus fugit deserunt. Temporibus inventore provident odio soluta iusto, magni nemo ducimus, corporis quidem animi asperiores ad. Earum error porro eius voluptas temporibus quam cum ut placeat atque iure repellendus facilis ratione officiis velit repellat modi reiciendis, nulla quos optio illo recusandae! Reprehenderit eum tempora laboriosam nisi alias, natus laborum est, voluptate odio, quibusdam consectetur animi provident ratione cupiditate minus quisquam mollitia ad perspiciatis saepe consequatur sed! Voluptatum tempora odit fuga voluptates! Molestias iste magnam, fuga pariatur quia, magni similique est facilis explicabo, maiores nobis eveniet non nostrum illo voluptate molestiae fugit dolore voluptatibus tenetur voluptatum laboriosam ab. Sed facere eligendi, esse, earum, distinctio sit officia fugiat culpa amet voluptatibus similique ipsam id quaerat tempore et.`
+
+const medicinePageParagraphContainer = document.createElement("div")
+medicinePageParagraphContainer.id = "medicinePageParagraphContainer"
+medicinePageParagraphContainer.append(medicalContentInitialParagraph_1,
+      medicalContentInitialParagraph_2)
 
     medicineContent.append(
       medicalContentInitialHeader,
-      medicalContentInitialParagraph
+      medicinePageParagraphContainer
     );
     medicalSection.append(medicineContent);
   }
