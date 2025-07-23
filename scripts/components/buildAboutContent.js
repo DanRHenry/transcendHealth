@@ -27,12 +27,15 @@ lectus, ac porttitor mauris consequat eu. Donec id justo et leo maximus hendreri
 dignissim sollicitudin ut ut augue. Phasellus dignissim finibus velit a mattis. In molestie 
 consectetur sem, in suscipit augue auctor aliquet.`
 
+const aboutPictureHolder = document.createElement("div")
+aboutPictureHolder.id = "aboutPictureHolder"
+
 const aboutPicture = document.createElement("img")
-aboutPicture.src = `../assets/jonas-degener-Hvl4NH9mF8M-unsplash.jpg`
+aboutPicture.src = "../assets/yousef-espanioly-DA_tplYgTow-unsplash.jpg"
 aboutPicture.alt = "about image"
 
-
+aboutPictureHolder.appendChild(aboutPicture)
   aboutTextSection.append(aboutHeader, aboutParagraph1, aboutParagraph2)
-  aboutContent.append(aboutTextSection, aboutPicture)
+  aboutContent.append(aboutTextSection, aboutPictureHolder)
   mainContent.append(aboutContent);
 }
