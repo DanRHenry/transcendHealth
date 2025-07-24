@@ -61,15 +61,6 @@ function handleAddressBtnClick(e) {
 
 function handleMedicineBtnClick(e) {
   mainContent.style.margin = "0";
-
-  /* 
-    @media screen and (orientation: landscape) {
-    #mainContent {
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-}
-    */
   e.preventDefault();
   clearBtnStyling();
   hidemap();
