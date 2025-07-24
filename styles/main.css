@@ -48,7 +48,7 @@ nav > div > div:hover {
 #mainContent {
   display: flex;
   max-height: calc(
-    100vh - 7em
+    100vh - 8em
   ); /* accounting for the height of the navbar, and footer */
   flex: 1;
   overflow: auto;
