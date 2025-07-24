@@ -4,8 +4,12 @@ body {
   min-height: 100vh;
   margin: 0;
   font-size: clamp(0.5rem, 1.5vw, 1rem);
+}
 
-  /* overflow: hidden; */
+#JSMessage {
+  margin: auto;
+  font-size: x-large;
+  font-family: cursive;
 }
 
 p,
@@ -72,14 +76,14 @@ nav > div > div:hover {
 
 #sidebar > div {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
   margin-bottom: 1em;
   margin-left: 1em;
   padding: 3px 0 3px 0;
   height: 3em;
   transition: left 0.1s;
   left: 0;
+  min-width: 100%;
 }
 
 #sidebar > div:hover {
@@ -313,6 +317,8 @@ footer > div > .button:hover {
   display: flex;
   flex-direction: column;
 }
+
+/*! The footer is interrupted on google pixel 7a */
 
 #hiddenMap {
   visibility: hidden;
