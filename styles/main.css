@@ -3,8 +3,8 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  /*font-size: clamp(10px, .75em, 20px);*/
-  font-size: clamp(.5rem, 2.5vw, 4rem);
+  font-size: clamp(0.5rem, 1.5vw, 1rem);
+
   overflow: hidden;
 }
 
@@ -14,19 +14,15 @@ h1 {
 }
 
 nav {
-  /* position: sticky; */
   position: static;
   top: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* background-color: rgb(0, 73, 0); */
   color: white;
   text-align: center;
   align-items: center;
   height: 4em;
-  /* border-bottom: 2px solid black; */
-    /* display: none; */
-    background-image: linear-gradient(rgb(0, 73, 0), rgb(114, 138, 114));
+  background-image: linear-gradient(rgb(0, 73, 0), rgb(114, 138, 114));
 }
 
 .button {
@@ -41,7 +37,6 @@ nav {
 }
 
 nav > div > div:hover {
-  /* border-color: white; */
   font-weight: bold;
 }
 
@@ -58,7 +53,6 @@ nav > div > div:hover {
 
 #medicalSection {
   width: 100%;
-  /* overflow-y: hidden; */
   overflow-x: hidden;
   display: grid;
   grid-template-columns: 7.5em 1fr;
@@ -67,8 +61,9 @@ nav > div > div:hover {
 #sidebar {
   padding-top: 1em;
   padding-right: 1em;
-  width: 7.5em;
-  font-size: clamp(.25rem, 2.5vw, 4rem);
+  /* width: 7.5em; */
+  font-size: clamp(0.25rem, 1.5vw, 1rem);
+
   color: whitesmoke;
   background-color: rgb(0, 73, 0);
   text-shadow: 1px 0 1px black;
@@ -82,7 +77,6 @@ nav > div > div:hover {
   margin-bottom: 1em;
   margin-left: 1em;
   padding: 3px 0 3px 0;
-  /*margin-right: 2em;*/
   height: 3em;
   transition: left 0.1s;
   left: 0;
@@ -95,22 +89,17 @@ nav > div > div:hover {
   border-right: 1px solid black;
   border-top-right-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
-  /* left: 2em; */
   padding-left: 2rem;
-  width: calc-size( fit-content, size + 1rem );
+  width: calc-size(fit-content, size + 1rem);
 }
 
 #medicineContent {
-  /* display: inline-block; */
-  width: calc(100vw - 9.5em);
-  /* grid-area: medicineContent; */
-  color: black;
+  width: calc(100vw - calc-size(fit-content, size + 1rem));
+  color: white;
   background-color: gray;
-  /* min-height: 200vh; */
   overflow-y: auto;
   padding: 1em;
-  /* overflow-y: visible; */
-  /* overflow: auto; */
+  /* padding: 10%; */
 }
 
 #medicineContent > h1 {
@@ -118,7 +107,7 @@ nav > div > div:hover {
   text-align: right;
 }
 
-#medicinePageParagraphContainer{
+#medicinePageParagraphContainer {
   background-color: rgb(187, 187, 187);
   border-radius: 1em;
   padding: 1em;
@@ -131,6 +120,8 @@ nav > div > div:hover {
 
 #medicinePageParagraphContainer > p {
   text-align: justify;
+  padding: 1em;
+  color: black;
 }
 /*! Landingpage Section  */
 
@@ -201,7 +192,7 @@ nav > div > div:hover {
 
 #scheduleAppointmentContent {
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 #contactTextContainer {
@@ -222,7 +213,7 @@ nav > div > div:hover {
   border: 3px solid rgb(0, 73, 0);
   border-radius: 1em;
   margin: 1em;
-  /* margin-bottom: 1em; */
+  margin-bottom: 1em;
 }
 
 #contactFormContainer > form {
@@ -267,7 +258,7 @@ nav > div > div:hover {
   margin: auto;
   color: rgb(0, 73, 0);
   /*font-size: large;*/
-  font-size: clamp(.5rem, 2.5vw, 4rem);
+  font-size: clamp(0.5rem, 1.5vw, 1rem);
   align-items: center;
 }
 
@@ -280,7 +271,7 @@ nav > div > div:hover {
   min-width: 10em;
 }
 
-#addressContent > div > div:nth-child(3){
+#addressContent > div > div:nth-child(3) {
   margin-top: 1em;
 }
 
@@ -305,7 +296,7 @@ footer {
   color: white;
   bottom: 0;
   padding-top: 1em;
-      background-image: linear-gradient(rgb(127, 184, 127), rgb(0, 73, 0));
+  background-image: linear-gradient(rgb(127, 184, 127), rgb(0, 73, 0));
 }
 
 footer > div > a:visited,
@@ -323,12 +314,10 @@ footer > div > .button:hover {
   flex-direction: column;
 }
 
-#hiddenMap{
+#hiddenMap {
   visibility: hidden;
   height: 0;
   display: flex;
-  max-height: calc(
-    100vh - 7em
-  ); 
+  max-height: calc(100vh - 7em);
   overflow: auto;
 }

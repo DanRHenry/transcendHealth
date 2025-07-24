@@ -4,8 +4,9 @@ import { buildScheduleAppointment } from "./components/buildScheduleAppointment.
 import { buildMedicineContent } from "./components/buildMedicineContent.js";
 import { buildAddressContent } from "./components/buildAddressContent.js";
 import { buildmap } from "./buildmap.js";
-import {serverURL} from "../serverURL.js";
+import { serverURL } from "../serverURL.js";
 
+const mainContent = document.getElementById("mainContent");
 const homeBtn = document.getElementById("homeBtn");
 const aboutBtn = document.getElementById("aboutBtn");
 const scheduleApptBtn = document.getElementById("scheduleApptBtn");
@@ -18,11 +19,11 @@ scheduleApptBtn.addEventListener("click", handleScheduleApptBtnClick);
 medicineBtn.addEventListener("click", handleMedicineBtnClick);
 addressInfoBtn.addEventListener("click", handleAddressBtnClick);
 
-
 function handleHomeBtnClick(e) {
-        hidemap()
+  hidemap();
 
   e.preventDefault();
+  mainContent.style.margin = null;
   clearBtnStyling();
   homeBtn.style.fontWeight = "bold";
   homeBtn.style.borderColor = "white";
@@ -31,8 +32,9 @@ function handleHomeBtnClick(e) {
 
 function handleAboutBtnClick(e) {
   e.preventDefault();
+  mainContent.style.margin = null;
   clearBtnStyling();
-  hidemap()
+  hidemap();
   aboutBtn.style.fontWeight = "bold";
   aboutBtn.style.borderColor = "white";
   buildAboutContent(serverURL);
@@ -40,8 +42,9 @@ function handleAboutBtnClick(e) {
 
 function handleScheduleApptBtnClick(e) {
   e.preventDefault();
+  mainContent.style.margin = null;
   clearBtnStyling();
-  hidemap()
+  hidemap();
   scheduleApptBtn.style.fontWeight = "bold";
   scheduleApptBtn.style.borderColor = "white";
   buildScheduleAppointment();
@@ -49,6 +52,7 @@ function handleScheduleApptBtnClick(e) {
 
 function handleAddressBtnClick(e) {
   e.preventDefault();
+  mainContent.style.margin = null;
   clearBtnStyling();
   addressInfoBtn.style.fontWeight = "bold";
   addressInfoBtn.style.borderColor = "white";
@@ -56,9 +60,19 @@ function handleAddressBtnClick(e) {
 }
 
 function handleMedicineBtnClick(e) {
+  mainContent.style.margin = "0";
+
+  /* 
+    @media screen and (orientation: landscape) {
+    #mainContent {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+    */
   e.preventDefault();
   clearBtnStyling();
-  hidemap()
+  hidemap();
   medicineBtn.style.fontWeight = "bold";
   medicineBtn.style.borderColor = "white";
   buildMedicineContent(serverURL);
@@ -73,19 +87,18 @@ function clearBtnStyling() {
   }
 }
 
-function hidemap () {
-    const map = document.getElementById('hiddenMap')
-    if (map) {
-    map.style.visibility = "hidden"
-    map.style.height = "0"
-    map.style.flex = null
-    }
+function hidemap() {
+  const map = document.getElementById("hiddenMap");
+  if (map) {
+    map.style.visibility = "hidden";
+    map.style.height = "0";
+    map.style.flex = null;
+  }
 }
 
-    window.addEventListener("load", () => {
-        buildmap()
-    })
+window.addEventListener("load", () => {
+  buildmap();
+});
 
-//homeBtn.click();
-medicineBtn.click();
-
+homeBtn.click();
+// medicineBtn.click();
