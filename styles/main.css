@@ -3,7 +3,8 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  font-size: clamp(10px, 1em, 20px);
+  /*font-size: clamp(10px, .75em, 20px);*/
+  font-size: clamp(.5rem, 2.5vw, 4rem);
 }
 
 p,
@@ -56,15 +57,17 @@ nav > div > div:hover {
 #medicalSection {
   display: grid;
   grid-template-areas: "sidebar medicineContent";
-  grid-template-columns: 7em 1fr;
+  grid-template-columns: 7.5em 1fr;
   width: 100%;
 }
 
 #sidebar {
   padding-top: 1em;
+  padding-right: 1em;
   /* text-indent: 1em; */
   grid-area: sidebar;
-  font-size: clamp(12px, 1em, 20px);
+  /*font-size: clamp(12px, 1em, 20px);*/
+  font-size: clamp(.25rem, 2.5vw, 4rem);
   position: static;
   color: whitesmoke;
   background-color: rgb(0, 73, 0);
@@ -80,6 +83,7 @@ nav > div > div:hover {
   margin-bottom: 1em;
   margin-left: 1em;
   padding: 3px 0 3px 0;
+  /*margin-right: 2em;*/
   height: 2em;
   transition: left 0.1s;
   left: 0;
@@ -92,7 +96,8 @@ nav > div > div:hover {
   border-right: 1px solid black;
   border-top-right-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
-  left: 1em;
+  left: 2em;
+  width: calc-size( fit-content, size + 1em );
 }
 
 #medicineContent {
@@ -253,7 +258,8 @@ nav > div > div:hover {
   width: 100%;
   margin: auto;
   color: rgb(0, 73, 0);
-  font-size: large;
+  /*font-size: large;*/
+  font-size: clamp(.5rem, 2.5vw, 4rem);
   align-items: center;
 }
 

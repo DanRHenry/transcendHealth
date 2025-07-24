@@ -86,6 +86,6 @@ function hidemap () {
         buildmap()
     })
 
-homeBtn.click();
-
+//homeBtn.click();
+medicineBtn.click();
 
