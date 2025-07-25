@@ -21,6 +21,7 @@ nav {
   align-items: center;
   height: 4em;
   background-image: linear-gradient(rgb(0, 73, 0), rgb(114, 138, 114));
+  white-space: preserve nowrap;
 }
 
 .button {
@@ -36,7 +37,6 @@ nav {
 
 nav > div > div:hover {
   font-weight: bold;
-  white-space: preserve nowrap;
 }
 
 #mainContent {
