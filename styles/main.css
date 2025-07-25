@@ -6,12 +6,6 @@ body {
   font-size: clamp(0.5rem, 1.5vw, 1rem);
 }
 
-#JSMessage {
-  margin: auto;
-  font-size: x-large;
-  font-family: cursive;
-}
-
 p,
 h1 {
   user-select: none;
