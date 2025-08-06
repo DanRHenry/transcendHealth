@@ -13,19 +13,19 @@ export function buildAboutContent(serverURL) {
   aboutHeader.innerText = "Dr. Trinh Tran"
 
   const aboutParagraph1 = document.createElement("p")
-  aboutParagraph1.innerText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus, velit vel luctus vestibulum,  odio  lectus  volutpat  nibh,  sed  hendrerit  libero  arcu  sed  justo.  Mauris placerat vestibulum leo, fringilla sollicitudin dolor. Cras eu arcu elementum, luctus est 
-quis, egestas justo. Suspendisse tincidunt eros ante, ac rutrum nunc consequat in. Fusce 
-est purus, sodales hendrerit dapibus vitae, bibendum eget sem. Aliquam vulputate augue libero, at gravida urna semper pellentesque. In bibendum mi ac tortor faucibus, sed 
-viverra velit rutrum. Etiam ultrices quis libero gravida malesuada.`
+  aboutParagraph1.innerText = `Dr. Trinh Tran is a board-certified rheumatologist with a deep commitment to patient-centered care and a distinguished background in both academic medicine and private practice. Born in Vietnam, Dr. Tran pursued her medical education internationally, beginning with medical school in London, England. She went on to complete her internal medicine residency at the Medical College of Wisconsin and advanced her specialty training with a rheumatology fellowship at the renowned Duke University Medical Center.`
 
 const aboutParagraph2 = document.createElement("p")
-aboutParagraph2.innerText = `Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quis lorem vitae lorem euismod venenatis eu vel mauris. Fusce nec mauris ornare 
-nisl dictum iaculis at ut ligula. Vestibulum dictum, nibh non aliquet ornare, nibh turpis 
-semper lorem, in varius mi est nec erat. Maecenas blandit quis odio vel faucibus. Nam efficitur semper nibh, quis mattis lacus accumsan vel. Etiam cursus eros sit amet turpis 
-malesuada  pretium  eget  ac  elit.  Suspendisse  in  eleifend  orci.  Orci  varius  natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In congue malesuada 
-lectus, ac porttitor mauris consequat eu. Donec id justo et leo maximus hendrerit quis vitae odio. Nam auctor lacinia enim consequat vulputate. Donec sit amet magna ut ligula 
-dignissim sollicitudin ut ut augue. Phasellus dignissim finibus velit a mattis. In molestie 
-consectetur sem, in suscipit augue auctor aliquet.`
+aboutParagraph2.innerText = `Since 2005, Dr. Tran has been dedicated to the diagnosis and management of complex autoimmune and musculoskeletal conditions. After several years in conventional rheumatology practice, she founded her own private practice in 2012, where she combines evidence-based medicine with a personalized approach tailored to each patient’s unique journey.`
+
+const aboutParagraph3 = document.createElement("p")
+aboutParagraph3.innerText = `In recent years, Dr. Tran has expanded her practice to incorporate functional and cellular medicine, a science-driven approach that emphasizes restoring health and vitality at the root level. This includes the use of therapeutic nutrients, medical peptides, and lifestyle interventions to support immune function, optimize cellular repair, and promote long-term wellness. Her integrative care model is grounded in clinical research and is designed to help patients not only manage disease but also regain functionality, improve energy, and extend their healthspan.`
+
+const aboutParagraph4 = document.createElement("p")
+aboutParagraph4.innerText = `Dr. Tran also integrates state-of-the-art regenerative technologies into her clinical approach, with a focus on healing the body at the cellular and stem cell level. These advanced modalities are designed to stimulate tissue repair, reduce inflammation, and restore optimal function from within. By combining the latest in biomedical innovation with personalized medicine, Dr. Tran empowers her patients to take an active role in their recovery and long-term vitality.`
+
+const aboutParagraph5 = document.createElement("p")
+aboutParagraph5.innerText = `Dr. Tran also understands the powerful connection between the mind and body in healing. She offers mindfulness meditation training to help patients manage stress, reduce inflammation, and support emotional and physical well-being. Her compassionate and integrative approach empowers patients to take an active role in their healing journey—body, mind, and spirit.`
 
 const aboutPictureHolder = document.createElement("div")
 aboutPictureHolder.id = "aboutPictureHolder"
@@ -35,7 +35,7 @@ aboutPicture.src = `${serverURL}/assets/yousef-espanioly-DA_tplYgTow-unsplash.jp
 aboutPicture.alt = "about image"
 
 aboutPictureHolder.appendChild(aboutPicture)
-  aboutTextSection.append(aboutHeader, aboutParagraph1, aboutParagraph2)
+  aboutTextSection.append(aboutHeader, aboutParagraph1, aboutParagraph2, aboutParagraph3, aboutParagraph4, aboutParagraph5)
   aboutContent.append(aboutTextSection, aboutPictureHolder)
   mainContent.append(aboutContent);
 }
