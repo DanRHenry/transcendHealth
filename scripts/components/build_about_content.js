@@ -1,9 +1,10 @@
 export function build_about_content(serverURL) {
   const aboutContent = document.createElement("div");
   aboutContent.id = "aboutContent";
+  aboutContent.className = "pageElements"
 
   const mainContent = document.getElementById("mainContent");
-  mainContent.innerHTML = "";
+  // mainContent.innerHTML = "";
 
   const aboutTextSection = document.createElement("div")
   aboutTextSection.id = "aboutTextSection"
@@ -34,8 +35,8 @@ const aboutPicture = document.createElement("img")
 aboutPicture.src = `${serverURL}/assets/yousef-espanioly-DA_tplYgTow-unsplash.jpg`
 aboutPicture.alt = "about image"
 
-aboutPictureHolder.appendChild(aboutPicture)
-  aboutTextSection.append(aboutHeader, aboutParagraph1, aboutParagraph2, aboutParagraph3, aboutParagraph4, aboutParagraph5)
-  aboutContent.append(aboutTextSection, aboutPictureHolder)
+aboutPictureHolder.append(aboutHeader, aboutPicture)
+  aboutTextSection.append(aboutParagraph1, aboutParagraph2, aboutParagraph3, aboutParagraph4, aboutParagraph5)
+  aboutContent.append(aboutPictureHolder,aboutTextSection)
   mainContent.append(aboutContent);
 }

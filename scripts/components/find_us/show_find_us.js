@@ -1,6 +1,6 @@
 export function show_find_us() {
   const mainContent = document.getElementById("mainContent");
-  mainContent.innerHTML = "";
+  // mainContent.innerHTML = "";
 
   const content = document.getElementById("hiddenMap")
   content.style.visibility = "visible"

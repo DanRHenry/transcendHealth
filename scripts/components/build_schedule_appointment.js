@@ -1,10 +1,11 @@
 export function build_schedule_appointment() {
   const scheduleContent = document.createElement("div");
   scheduleContent.id = "scheduleAppointmentContent";
+  scheduleContent.className = "pageElements"
   // scheduleContent.innerText = "Schedule Appointment Content";
 
   const mainContent = document.getElementById("mainContent");
-  mainContent.innerHTML = "";
+//   mainContent.innerHTML = "";
 
   mainContent.append(scheduleContent);
 
@@ -20,6 +21,8 @@ export function build_schedule_appointment() {
 contactTextContainer.append(contactTextHeader, contactTextParagraph)
 
 
+const contactFormBody = document.createElement("div")
+contactFormBody.id = "contactFormBody";
 const contactFormContainer = document.createElement("div")
 contactFormContainer.id = "contactFormContainer"
 
@@ -59,7 +62,9 @@ contactSubmitBtn.value = "Submit"
 contactForm.append(nameInput, emailInput, phoneInput, contactMessageBody, contactSubmitBtn)
 contactFormContainer.append(contactForm)
 
-scheduleContent.append(contactTextContainer, contactFormContainer)
+contactFormBody.append(contactFormContainer)
+
+scheduleContent.append(contactTextContainer, contactFormBody)
 }
 
 // formsubmit.co may not be trustworthy

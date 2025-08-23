@@ -1,13 +1,27 @@
+:root {
+  --heroContentHeightOffset: 10rem;
+}
+p {
+    text-align: justify;
+    
+}
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    margin: 0;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
 }
 
 /*! Navbar Section  */
-navbar {
-  position: static;
-  top: 0;
+#navbar {
+  /* top: 0; */
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   color: white;
   text-align: center;
   align-items: center;
@@ -16,94 +30,192 @@ navbar {
   white-space: preserve nowrap;
 }
 
-
-navbar > div > div:hover {
+#navbar > div > div:hover {
   font-weight: bold;
   cursor: pointer;
 }
 
 /*! Hero Carousel Section */
-#heroCarousel{
-    position: relative;
-    height: 400px;
+#heroCarousel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/7;
+  /* max-height: 500px; */
 }
 
-.heroContent{
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 1s ease;
-    background-size: 100% 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-indent: 10%;
-    color: white;
+.heroContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+  background-size: 100% auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* align-items: last baseline; */
+  /* background-color: blue; */
 }
 
-.heroContentHeaders{
-    font-size:  xx-large;
+.heroContent > img {
+  max-height: 100%;
+  width: 100%;
 }
 
-.heroContentBtnLines{
-    margin-top: 1rem;
+.heroContentHeaders {
+  font-size: xx-large;
+  position: relative;
+  bottom: var(--heroContentHeightOffset);
+  z-index: 2;
+  color: white;
+  text-indent: 2rem;
 }
 
-.heroContentBtnLines > button {
-    border-radius: 10px;
-    margin-right: 1rem;
+.heroContentSentences {
+  position: relative;
+  bottom: var(--heroContentHeightOffset);
+  text-indent: 2rem;
 }
 
-.heroContentBtnLines > button:hover {
-    background-color: gray;
-    color: white;
+.heroContentBtnLines {
+  /* margin-top: 1rem; */
+  position: relative;
+  bottom: calc(var(--heroContentHeightOffset)++10);
+  bottom: var(--heroContentHeightOffset);
+  margin-top: 1rem;
+  text-indent: 2rem;
+}
+
+.heroContentBtnLines > button, .heroScheduleBtns {
+  border-radius: 10px;
+  margin-right: 1rem;
+}
+
+.heroContentBtnLines > button:hover, .heroScheduleBtns:hover {
+  background-color: gray;
+  color: white;
 }
 /*! Main Content Section */
-/* #mainContent {
-  display: flex;
-  height: calc(100vh - 8em);
+#mainContent {
+  min-height: calc(100vh - 8em);
   max-width: 100vw;
   flex: 1;
-  padding: 1rem;
-} */
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+/*! b_section  */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 0;
+}
+
+.image-section > img {
+    width: 100%;
+    height: 100%;
+}
+
+.text-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons > a {
+  text-decoration: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.buttons > a:visited {
+  color: black;
+}
+
+.btn-info {
+  color: white !important;
+  background-color: rgb(1, 178, 1);
+}
+
+.btn-appointment {
+  color: white !important;
+  background-color: blue;
+}
+
+.btn-info:hover,
+.btn-appointment:hover {
+  color: black !important;
+}
 
 /*! Schedule Appointment Section */
-
+/* 
+When the grid wraps, each column should be 100%
+Before the grid wraps, each column should be 50%, with items centered
+The grid should wrap when the input form width crosses 400px
+*/
 #scheduleAppointmentContent {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
 }
 
 #contactTextContainer {
-  padding: 1em;
-  min-width: 40%;
+  max-width: 80vw;
 }
 
 #contactTextContainer > p {
   text-align: justify;
 }
 
-#contactFormContainer {
-  min-height: 30em;
+#contactFormBody{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+      max-width: 80vw;
+
 }
+
 
 #contactFormContainer,
 #contactFormContainer > form {
   border: 3px solid rgb(0, 73, 0);
-  border-radius: 1em;
-  margin: 1em;
-  margin-bottom: 1em;
+}
+
+#contactFormContainer {
+  border-radius: 20px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contactFormContainer {
+    width: 400px;
+}
+
+#contactMessageBody {
+  height: 90px;
 }
 
 #contactFormContainer > form {
-  height: 95%;
+  width: 375px;
+  height: 380px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  border-radius: 10px;
 }
 
-#contactFormContainer > form input,
+#contactFormContainer > form > input,
 #contactMessageBody {
   width: 80%;
   align-self: center;
@@ -115,7 +227,7 @@ navbar > div > div:hover {
 #contactMessageBody {
   height: 50%;
   resize: none;
-  max-height: 100%;
+  /* max-height: 100%; */
 }
 
 #contactSubmitBtn,
@@ -127,6 +239,40 @@ navbar > div > div:hover {
 #contactSubmitBtn:hover {
   background-color: rgb(216, 216, 216);
   cursor: pointer;
+}
+
+/*! About Section */
+
+#aboutContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 1em;
+  margin-top: 1em;
+}
+
+#aboutTextSection {
+  /* margin: 1em; */
+  /* max-width: 46%; */
+}
+
+#aboutTextSection > p {
+  text-align: justify;
+}
+
+#aboutPictureHolder {
+  /* margin: 1em; */
+  /* width: 46%; */
+}
+
+#aboutPictureHolder > img {
+  border-radius: 1em;
+  border-radius: 50%;
+  border: 2px solid rgb(0, 73, 0);
+  width: 46%;
+  min-width: 100%;
+  max-height: 60vh;
+  aspect-ratio: 1/1;
 }
 
 /*! Footer Section */
@@ -156,4 +302,9 @@ footer > div > .button:hover {
 #phoneAndEmail {
   display: flex;
   flex-direction: column;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }

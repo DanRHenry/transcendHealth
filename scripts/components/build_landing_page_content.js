@@ -1,11 +1,13 @@
 import { build_hero_carousel } from "./build_hero_carousel.js";
 
-export function build_landing_page_content(serverURL) {
+export function build_landing_page_content(serverURL, heroCarouselContent) {
+  // document.getElementById("heroCarousel")?.remove()
   const mainContent = document.getElementById("mainContent");
-  mainContent.innerHTML = "";
+  // mainContent.innerHTML = "";
 
   const landingpageContent = document.createElement("div");
   landingpageContent.id = "landingpageContent";
+  landingpageContent.className = "pageElements"
 
   const landingpageHeaderAndImageSection = document.createElement("div");
   landingpageHeaderAndImageSection.id = "landingpageHeaderAndImageSection";
@@ -54,7 +56,7 @@ consectetur sem, in suscipit augue auctor aliquet.`;
 
   mainContent.append(landingpageContent);
 
-  build_hero_carousel()
+  build_hero_carousel(heroCarouselContent)
 
 
 }
